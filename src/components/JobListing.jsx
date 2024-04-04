@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaMapMarker } from "react-icons/fa";
 
@@ -33,11 +34,11 @@ const JobListing = ({ job }) => {
             <FaMapMarker className="inline text-lg mb-1 mr-1"/>
             {job.location}
           </div>
-          <a
+          <Link
             href={`/job/${job.id}`}
             className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm">
             Read More
-          </a>
+          </Link>
         </div>
       </div>
     </div>
