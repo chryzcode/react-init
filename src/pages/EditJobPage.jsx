@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { useLoaderData, useNavigate } from "react-router-dom";
-import {toast} from 'react-toastify'
+import { useParams, useLoaderData, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
-const EditJobPage = updateJobSubmit => {
+const EditJobPage = ({ updateJobSubmit }) => {
   const job = useLoaderData();
   const [title, setTitle] = useState(job.title);
   const [type, setType] = useState(job.type);
@@ -15,6 +15,7 @@ const EditJobPage = updateJobSubmit => {
   const [contactPhone, setContactPhone] = useState(job.company.contactPhone);
 
   const navigate = useNavigate();
+  const { id } = useParams();
 
   const submitForm = e => {
     e.preventDefault();
@@ -41,7 +42,7 @@ const EditJobPage = updateJobSubmit => {
       <div className="container m-auto max-w-2xl py-24">
         <div className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0">
           <form onSubmit={submitForm}>
-            <h2 className="text-3xl text-center font-semibold mb-6">Add Job</h2>
+            <h2 className="text-3xl text-center font-semibold mb-6">Update Job</h2>
 
             <div className="mb-4">
               <label htmlFor="type" className="block text-gray-700 font-bold mb-2">
