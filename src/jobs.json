@@ -83,6 +83,20 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "65e7",
+      "title": "New Job",
+      "type": "Full-Time",
+      "location": "Texas, USA",
+      "description": "The job is entry-level",
+      "salary": "Under $50K",
+      "company": {
+        "name": "Test Inc",
+        "description": "Good",
+        "contactEmail": "alabaolanrewaju13@gmail.com",
+        "contactPhone": "09036449958"
+      }
     }
   ]
 }
