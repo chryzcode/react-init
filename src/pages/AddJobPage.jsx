@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AddJobPage = () => {
+const AddJobPage = ({ addJobSubmit }) => {
   const [title, setTitle] = useState("");
   const [type, setType] = useState("Full-Time");
   const [location, setLocation] = useState("");
@@ -13,6 +13,20 @@ const AddJobPage = () => {
 
   const submitForm = e => {
     e.preventDefault();
+    const newJob = {
+      title,
+      type,
+      location,
+      description,
+      salary,
+      company: {
+        name: companyName,
+        description: companyDescription,
+        contactEmail,
+        contactPhone,
+      },
+    };
+    addJobSubmit(newJob);
   };
 
   return (
